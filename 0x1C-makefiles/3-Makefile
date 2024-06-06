@@ -1,16 +1,16 @@
-# more advance useful makefile
+# more advanced useful makefile
 
 CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:%.c=%.o}
 NAME = school
-RM = rm -rf
+RM = rm -f
 
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 clear:
 	${RM} *- ${NAME}
 oclean:
-	${RM} ${NAME}
+	${RM} ${OBJ}
 fclean: clean oclean
 re: fclean all
